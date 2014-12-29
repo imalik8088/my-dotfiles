@@ -1,0 +1,41 @@
+
+#colors
+red=$(tput setaf 1)
+green=$(tput setaf 2)
+cyan=$(tput setaf 6)
+pink=$(tput bold ; tput setaf 5)
+reset=$(tput sgr0)
+
+gitStatus() { git diff --quiet 2> /dev/null || echo ' *' ; }
+gitBranch() { git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/ (\1$(gitStatus))/" ; }
+
+PS1="[\[$green\]\T\[$reset\]] \[$red\]\u\[$reset\] [\[$cyan\]\W\[$reset\]]\[$pink\]\$(gitBranch)\[$reset\] \$ "
+PS2=" > "
+
+
+source ~/.git-completion.sh
+
+
+# aliases
+alias v="vim"
+alias c="celar"
+alias l="ls -l"
+alias ll="ls -al"
+alias gp="git push"
+alias gpull="git pull"
+alias gb="git branch"
+alias ga="git add -p"
+alias gs="git status"
+alias gaa="git add --all"
+alias gc="git commit"
+alias gl="git co -"
+alias gm="git merge"
+alias gcom="git co master"
+alias gco="git checkout -b"
+alias reload="source ~/.bash_profile"
+alias edit_profile="vim ~/.bashrc"
+alias cleardns="dscacheutil -flushcache"
+alias s="subl ."
+alias ..="cd .."
+alias ...="cd ../.."
+
