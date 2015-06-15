@@ -54,6 +54,7 @@ brew cleanup
 #############################################
 
 # Homebrew Cask
+brew tap caskroom/versions
 brew install caskroom/cask/brew-cask
 
 
@@ -82,14 +83,16 @@ apps=(
   sketch
   vlc
   cloudup
+  atom
   mou
   evernote
   skype
   transmission
   archiver
-  eclipse-jee
   teamviewer
   vox
+  cd-to
+  cakebrew
 )
 
 # Install apps to /Applications
@@ -100,8 +103,8 @@ brew cask install --appdir="/Applications" ${apps[@]}
 # apps searchable by alfred 2
 brew cask alfred link
 
-
-
+# Diff toll for mac
+brew install homebrew/x11/meld
 
 #############################################
 # FONTS
@@ -133,7 +136,3 @@ brew cask install ${fonts[@]}
 
 
 pretty_print "We are done!...everthing looks good!"
-
-
-
-
