@@ -1,3 +1,4 @@
+# http://sourabhbajaj.com/mac-setup/index.html
 # install brew binaries and casks
 
 pretty_print() {
@@ -15,6 +16,10 @@ if test ! $(which brew); then
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
+echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.bash_profile
+
+brew doctor
+
 # Update homebrew recipes
 brew update
 
@@ -23,10 +28,11 @@ brew update
 
 # Homebrew Binararies
 binaries=(
-		coreutils
-		findutils
+    coreutils
+    findutils
     git
-    node
+    cassandra
+    nvm
     tree
     postgresql
     mysql
@@ -35,6 +41,12 @@ binaries=(
     mackup
     redis
     wget
+    maven
+    gradle
+    sbt
+    scala
+    nvm
+    jenv
 )
 
 pretty_print "Installing the most recent verions of some OSX tools"
@@ -67,32 +79,35 @@ apps=(
 	qlprettypatch
 	quicklook-csv
 	betterzipql
-  dropbox
-  transmit
-  google-hangouts
-  google-drive
-  appcleaner
-  gitx
-  launchrocket
-  firefox
-  spotify
-  vagrant
-  sequel-pro
-  flash
-  virtualbox
-  sketch
-  vlc
-  cloudup
-  atom
-  mou
-  evernote
-  skype
-  transmission
-  archiver
-  teamviewer
-  vox
-  cd-to
-  cakebrew
+    dropbox
+    google-hangouts
+    google-chrome
+    google-drive
+    appcleaner
+    gitx
+    launchrocket
+    firefox
+    spotify
+    sequel-pro
+    flash
+    virtualbox
+    vagrant
+    vlc
+    atom
+    mou
+    evernote
+    skype
+    transmission
+    archiver
+    teamviewer
+    vox
+    cd-to
+    cakebrew
+    slack
+    sublime-text
+    zsh
+    zsh-completions
+    cask install dockertoolbox
 )
 
 # Install apps to /Applications
@@ -133,6 +148,19 @@ fonts=(
 # install fonts
 echo "installing fonts..."
 brew cask install ${fonts[@]}
+
+
+# Dev tools
+
+tools=(
+    java6
+    java7
+    java
+)
+
+# install tools
+echo "--------------------- installing tools..."
+brew cask install ${tools[@]}
 
 
 pretty_print "We are done!...everthing looks good!"
