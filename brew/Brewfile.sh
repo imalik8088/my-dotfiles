@@ -107,7 +107,8 @@ apps=(
     sublime-text
     zsh
     zsh-completions
-    cask install dockertoolbox
+    dockertoolbox
+    dbeaver-enterprise
 )
 
 # Install apps to /Applications
