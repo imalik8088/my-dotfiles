@@ -94,7 +94,7 @@ apps=(
     vagrant
     vlc
     atom
-    mou
+    macdown
     evernote
     skype
     transmission
