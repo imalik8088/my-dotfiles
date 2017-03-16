@@ -109,6 +109,7 @@ apps=(
     zsh-completions
     dockertoolbox
     dbeaver-enterprise
+    mongodb-compass
 )
 
 # Install apps to /Applications
