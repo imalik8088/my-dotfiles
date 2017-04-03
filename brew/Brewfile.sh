@@ -110,6 +110,7 @@ apps=(
     dockertoolbox
     dbeaver-enterprise
     mongodb-compass
+    lepton
 )
 
 # Install apps to /Applications
