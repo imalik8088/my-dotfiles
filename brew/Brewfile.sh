@@ -109,8 +109,8 @@ apps=(
     zsh-completions
     dockertoolbox
     dbeaver-enterprise
-    mongodb-compass
     lepton
+    insomnia
 )
 
 # Install apps to /Applications
