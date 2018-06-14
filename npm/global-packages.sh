@@ -6,10 +6,11 @@ sudo chown -R $(whoami) ~/.npm
 
 
 packages=(
-	grunt-cli
-	gulp
-	coffeescript
-	node-dev
+	nodemon
+	typescript
+	tldr
+	yarn
+	serve
 	bower
 )
 
