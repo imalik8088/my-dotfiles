@@ -10,14 +10,14 @@ pretty_print "Setup gemrc for default options"
 
 
 # copy profile files
-cp bash/bash_profile ~/.bash_profile
-cp bash/bashrc ~/.bashrc
-cp git/gitconfig ~/.gitconfig
-cp git/gitignore ~/.gitignore
-cp git/git-completion.sh ~/.git-completion.sh
+# cp bash/bash_profile ~/.bash_profile
+# cp bash/bashrc ~/.bashrc
+# cp git/gitconfig ~/.gitconfig
+# cp git/gitignore ~/.gitignore
+# cp git/git-completion.sh ~/.git-completion.sh
 
 # call scripts for configuring the osx and packages
-./osx/confs.sh
+# ./osx/confs.sh
 ./brew/Brewfile.sh
 ./npm/global-packages.sh
 
