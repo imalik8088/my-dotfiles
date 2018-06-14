@@ -31,15 +31,16 @@ binaries=(
     coreutils
     findutils
     git
-    cassandra
     nvm
+    fzf
+    ack
+    z
+    sysdig
     tree
-    postgresql
     mysql
     vim
     imagemagick
     mackup
-    redis
     wget
     maven
     gradle
@@ -72,35 +73,27 @@ brew install caskroom/cask/brew-cask
 
 # Apps
 apps=(
-	qlcolorcode
-	qlstephen
-	qlmarkdown
-	quicklook-json
-	qlprettypatch
-	quicklook-csv
-	betterzipql
+    qlcolorcode
+    qlstephen
+    qlmarkdown
+    quicklook-json
+    qlprettypatch
+    quicklook-csv
+    betterzipql
     dropbox
-    google-hangouts
     google-chrome
     google-drive
     appcleaner
-    gitx
     launchrocket
     firefox
-    spotify
-    sequel-pro
-    flash
     virtualbox
     vagrant
     vlc
-    atom
+    visual-studio-code
     macdown
     evernote
     skype
     transmission
-    archiver
-    teamviewer
-    vox
     cd-to
     cakebrew
     slack
@@ -109,8 +102,8 @@ apps=(
     zsh-completions
     dockertoolbox
     dbeaver-enterprise
-    lepton
     insomnia
+    iterm2
 )
 
 # Install apps to /Applications
@@ -156,8 +149,7 @@ brew cask install ${fonts[@]}
 # Dev tools
 
 tools=(
-    java6
-    java7
+    java8
     java
 )
 
