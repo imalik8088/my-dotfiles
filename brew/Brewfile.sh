@@ -104,6 +104,8 @@ apps=(
     dbeaver-enterprise
     insomnia
     iterm2
+    torbrowser
+    telegram-desktop
 )
 
 # Install apps to /Applications
