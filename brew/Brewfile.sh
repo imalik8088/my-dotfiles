@@ -100,8 +100,6 @@ apps=(
     sublime-text
     zsh
     zsh-completions
-    dockertoolbox
-    dbeaver-enterprise
     insomnia
     iterm2
     torbrowser
