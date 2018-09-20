@@ -1,19 +1,13 @@
-pretty_print() {
-  printf "\n%b\n" "$1"
-}
-
 sudo chown -R $(whoami) ~/.npm
-
 
 packages=(
 	nodemon
-	typescript
 	tldr
 	yarn
 	serve
-	bower
+	serverless
 )
 
-pretty_print "npm packages..."
+echo "======================================================\n [NPM] INSTALLING GLOABAL PACKAGES \n======================================================"
 	npm install -g ${packages[@]}
 

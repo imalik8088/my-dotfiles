@@ -1,22 +1,19 @@
 # http://sourabhbajaj.com/mac-setup/index.html
-# install brew binaries and casks
+
 
 pretty_print() {
   printf "\n%b\n" "$1"
 }
 
-#############################################
-# BINARIES
-#############################################
+echo "======================================================\n CHECK BREW IF INSTALLED \n======================================================"
 
 # Check for Homebrew,
 # Install if we don't have it
 if test ! $(which brew); then
-  echo "Installing homebrew..."
+  echo "================ INSTALLING HOMEBREW"
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.bash_profile
 fi
-
-echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.bash_profile
 
 brew doctor
 
@@ -26,7 +23,8 @@ brew update
 # coreutils: GNU core utilities...
 # findutils: GNU find, locate, updatedb and xargs...
 
-# Homebrew Binararies
+echo "======================================================\n INSTALLING BINARIES \n======================================================"
+
 binaries=(
     coreutils
     findutils
@@ -35,9 +33,7 @@ binaries=(
     fzf
     ack
     z
-    sysdig
     tree
-    mysql
     vim
     imagemagick
     mackup
@@ -48,6 +44,15 @@ binaries=(
     scala
     nvm
     jenv
+    zsh
+    zsh-completions
+    ansible
+    httpie
+    jq
+    kubectl
+    kubernetes-helm
+    awscli
+    watch
 )
 
 pretty_print "Installing the most recent verions of some OSX tools"
@@ -70,6 +75,7 @@ brew cleanup
 brew tap caskroom/versions
 brew install caskroom/cask/brew-cask
 
+echo "======================================================\n INSTALLING CASK APPS \n======================================================"
 
 # Apps
 apps=(
@@ -82,7 +88,7 @@ apps=(
     betterzipql
     dropbox
     google-chrome
-    google-drive
+    google-drive-file-stream
     appcleaner
     launchrocket
     firefox
@@ -91,35 +97,29 @@ apps=(
     vlc
     visual-studio-code
     macdown
-    evernote
-    skype
     transmission
-    cd-to
     cakebrew
-    slack
     sublime-text
     zsh
     zsh-completions
     insomnia
     iterm2
-    torbrowser
-    telegram-desktop
+    tor-browser
+    rocket-chat
+    tunnelblick
+    mongodb-compass
+    java
+    java8
+    teamviewer
 )
 
-# Install apps to /Applications
-# Default is: /Users/$user/Applications
-echo "installing apps..."
 brew cask install --appdir="/Applications" ${apps[@]}
 
 # apps searchable by alfred 2
 brew cask alfred link
 
-# Diff toll for mac
-brew install homebrew/x11/meld
 
-#############################################
-# FONTS
-#############################################
+echo "======================================================\n INSTALLING FONTS \n======================================================"
 
 brew tap caskroom/fonts
 
@@ -141,21 +141,7 @@ fonts=(
   font-ubuntu
 )
 
-# install fonts
-echo "installing fonts..."
 brew cask install ${fonts[@]}
-
-
-# Dev tools
-
-tools=(
-    java8
-    java
-)
-
-# install tools
-echo "--------------------- installing tools..."
-brew cask install ${tools[@]}
 
 
 pretty_print "We are done!...everthing looks good!"
