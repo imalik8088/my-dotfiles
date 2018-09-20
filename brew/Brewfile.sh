@@ -68,10 +68,6 @@ brew install ${binaries[@]}
 brew cleanup
 
 
-#############################################
-# CASKS
-#############################################
-
 # Homebrew Cask
 brew tap caskroom/versions
 brew install caskroom/cask/brew-cask
@@ -111,6 +107,7 @@ apps=(
     teamviewer
     minikube
     alfred
+    whatsapp
 )
 
 brew cask install --appdir="/Applications" ${apps[@]}
