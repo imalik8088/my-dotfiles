@@ -85,7 +85,6 @@ apps=(
     quicklook-json
     qlprettypatch
     quicklook-csv
-    betterzipql
     dropbox
     google-chrome
     google-drive-file-stream
@@ -100,8 +99,6 @@ apps=(
     transmission
     cakebrew
     sublime-text
-    zsh
-    zsh-completions
     insomnia
     iterm2
     tor-browser
@@ -111,6 +108,7 @@ apps=(
     java
     java8
     teamviewer
+    minikube
 )
 
 brew cask install --appdir="/Applications" ${apps[@]}
