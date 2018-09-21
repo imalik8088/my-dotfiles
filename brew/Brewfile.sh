@@ -84,7 +84,7 @@ apps=(
     quicklook-csv
     dropbox
     google-chrome
-    google-drive-file-stream
+    google-backup-and-sync
     appcleaner
     launchrocket
     firefox
