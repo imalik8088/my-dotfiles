@@ -109,6 +109,7 @@ apps=(
     java8
     teamviewer
     minikube
+    alfred
 )
 
 brew cask install --appdir="/Applications" ${apps[@]}
