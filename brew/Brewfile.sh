@@ -52,6 +52,7 @@ binaries=(
     kubectl
     kubernetes-helm
     awscli
+    terraform
     watch
 )
 
