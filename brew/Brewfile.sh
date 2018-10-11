@@ -143,3 +143,6 @@ brew cask install ${fonts[@]}
 
 
 pretty_print "We are done!...everthing looks good!"
+
+
+easy_install Pygments
