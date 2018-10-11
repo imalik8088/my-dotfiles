@@ -54,6 +54,7 @@ binaries=(
     awscli
     terraform
     watch
+    telnet
 )
 
 pretty_print "Installing the most recent verions of some OSX tools"
