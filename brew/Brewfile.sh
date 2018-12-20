@@ -116,6 +116,9 @@ brew cask install --appdir="/Applications" ${apps[@]}
 # apps searchable by alfred 2
 brew cask alfred link
 
+# docker layer inpection
+brew tap wagoodman/dive
+brew install dive
 
 echo "======================================================\n INSTALLING FONTS \n======================================================"
 
