@@ -109,6 +109,7 @@ apps=(
     minikube
     alfred
     whatsapp
+    lunar
 )
 
 brew cask install --appdir="/Applications" ${apps[@]}
