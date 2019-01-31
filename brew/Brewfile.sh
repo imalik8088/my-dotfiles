@@ -55,6 +55,7 @@ binaries=(
     terraform
     watch
     telnet
+    stern
 )
 
 pretty_print "Installing the most recent verions of some OSX tools"
@@ -126,7 +127,10 @@ echo "======================================================\n INSTALLING FONTS 
 brew tap caskroom/fonts
 
 fonts=(
+  font-consolas-for-powerline
   font-m-plus
+  font-roboto-mono
+  font-fira-code
   font-clear-sans
   font-roboto
   font-open-sans
