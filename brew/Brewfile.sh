@@ -111,6 +111,8 @@ apps=(
     alfred
     whatsapp
     lunar
+    dozer
+    fluor
 )
 
 brew cask install --appdir="/Applications" ${apps[@]}
