@@ -69,6 +69,9 @@ pretty_print "installing binaries..."
 brew install ${binaries[@]}
 brew cleanup
 
+# https://github.com/robscott/kube-capacity?utm_sq=fzz4jx87q0
+brew tap robscott/tap
+brew install robscott/tap/kube-capacity
 
 # Homebrew Cask
 brew tap caskroom/versions
