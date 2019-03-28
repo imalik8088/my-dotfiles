@@ -56,6 +56,7 @@ binaries=(
     watch
     telnet
     stern
+    typescript
 )
 
 pretty_print "Installing the most recent verions of some OSX tools"
