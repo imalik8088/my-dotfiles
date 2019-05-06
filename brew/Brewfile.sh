@@ -117,6 +117,7 @@ apps=(
     lunar
     dozer
     fluor
+    typora
 )
 
 brew cask install --appdir="/Applications" ${apps[@]}
