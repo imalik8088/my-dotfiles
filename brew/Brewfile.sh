@@ -43,7 +43,7 @@ binaries=(
     sbt
     scala
     nvm
-    jenv
+    jabba
     zsh
     zsh-completions
     ansible
@@ -57,6 +57,8 @@ binaries=(
     telnet
     stern
     typescript
+    kotlin
+    rust
 )
 
 pretty_print "Installing the most recent verions of some OSX tools"
