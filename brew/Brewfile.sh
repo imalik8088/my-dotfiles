@@ -120,6 +120,7 @@ apps=(
     dozer
     fluor
     typora
+    balenaetcher
 )
 
 brew cask install --appdir="/Applications" ${apps[@]}
