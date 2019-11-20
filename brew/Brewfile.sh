@@ -59,6 +59,7 @@ binaries=(
     typescript
     kotlin
     rust
+    shellcheck
 )
 
 pretty_print "Installing the most recent verions of some OSX tools"
