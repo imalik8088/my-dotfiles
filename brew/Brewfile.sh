@@ -60,6 +60,7 @@ binaries=(
     kotlin
     rust
     shellcheck
+    pandoc
 )
 
 pretty_print "Installing the most recent verions of some OSX tools"
