@@ -66,6 +66,7 @@ binaries=(
     shellcheck
     pandoc
     dive
+    minikube
 )
 
 
@@ -113,8 +114,7 @@ apps=(
     adoptopenjdk11
     mongodb-compass
     teamviewer
-    minikube
-    alfred
+    alfred3
     whatsapp
     lunar
     dozer
