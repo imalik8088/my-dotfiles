@@ -7,6 +7,13 @@
 ./node-g-pkg.sh     # install global npm packages
 ```
 
+## Configure Mac
+1. install [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh#basic-installation)
+2. login to Dropbox 
+3. create sym link with `ln -s ~/Dropbox/Mackup/.mackup.cfg ~/.mackup.cfg` 
+4. Install [Docker for Mac](https://download.docker.com/mac/stable/Docker.dmg)
+5. mackup restore
+
 
 ### personal hints
 
