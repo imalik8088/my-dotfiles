@@ -125,12 +125,9 @@ apps=(
 
 brew cask install --appdir="/Applications" ${apps[@]}
 
-# apps searchable by alfred 2
-brew cask alfred link
-
 echo "======================================================\n INSTALLING FONTS \n======================================================"
 
-brew tap caskroom/fonts
+brew tap homebrew/cask-fonts
 
 fonts=(
   font-consolas-for-powerline
