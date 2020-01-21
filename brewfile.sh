@@ -29,21 +29,22 @@ binaries=(
     coreutils
     findutils
     git
-    nvm
     fzf
     ack
     z
     tree
     vim
-    imagemagick
-    mackup
-    wget
+    nvm
+    typescript
+    kotlin
+    rust
+    scala
     maven
     gradle
     sbt
-    scala
-    nvm
-    jabba
+    imagemagick
+    mackup
+    wget
     zsh
     zsh-completions
     ansible
@@ -56,11 +57,9 @@ binaries=(
     watch
     telnet
     stern
-    typescript
-    kotlin
-    rust
     shellcheck
     pandoc
+    dive
 )
 
 pretty_print "Installing the most recent verions of some OSX tools"
@@ -103,9 +102,7 @@ apps=(
     vlc
     visual-studio-code
     macdown
-    transmission
     cakebrew
-    sublime-text
     insomnia
     iterm2
     tor-browser
@@ -129,10 +126,6 @@ brew cask install --appdir="/Applications" ${apps[@]}
 
 # apps searchable by alfred 2
 brew cask alfred link
-
-# docker layer inpection
-brew tap wagoodman/dive
-brew install dive
 
 echo "======================================================\n INSTALLING FONTS \n======================================================"
 

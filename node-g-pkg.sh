@@ -3,7 +3,6 @@ sudo chown -R $(whoami) ~/.npm
 packages=(
 	nodemon
 	tldr
-	yarn
 	serve
 	serverless
 )

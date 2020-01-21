@@ -1,4 +1,14 @@
-# personal hints
+## install steps for new mac setup
+
+```bash
+./osxprep.sh        # update the system and install xcode command line tools
+./macos.sh          # changing default behaviour of mac os to personal one
+./brewfile.sh       # install apps and cli tools
+./node-g-pkg.sh     # install global npm packages
+```
+
+
+### personal hints
 
 - install docker from https://download.docker.com/mac/stable/Docker.dmg
 - install little snitch from https://www.obdev.at/products/littlesnitch/download-previous-versions.html
@@ -6,6 +16,5 @@
 - https://medium.com/@mo_keefe/a-kubernetes-development-workflow-for-macos-8c41669a4518
 
 
-# todo
-[] do some cleanup ^_^
- 
+#### _inspired my_: 
+* https://github.com/donnemartin/dev-setup/
