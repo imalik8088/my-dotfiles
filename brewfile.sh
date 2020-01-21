@@ -1,6 +1,9 @@
 # http://sourabhbajaj.com/mac-setup/index.html
 
 
+set -x
+set -e
+
 pretty_print() {
   printf "\n%b\n" "$1"
 }
@@ -22,6 +25,9 @@ brew update
 
 # coreutils: GNU core utilities...
 # findutils: GNU find, locate, updatedb and xargs...
+
+brew tap adoptopenjdk/openjdk
+brew cask install adoptopenjdk/openjdk/adoptopenjdk8
 
 echo "======================================================\n INSTALLING BINARIES \n======================================================"
 
@@ -62,9 +68,6 @@ binaries=(
     dive
 )
 
-pretty_print "Installing the most recent verions of some OSX tools"
-	brew tap homebrew/dupes
-	brew install homebrew/dupes/grep
 
 printf 'export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"' >> ~/.bashrc
 export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
@@ -78,8 +81,7 @@ brew tap robscott/tap
 brew install robscott/tap/kube-capacity
 
 # Homebrew Cask
-brew tap caskroom/versions
-brew install caskroom/cask/brew-cask
+brew tap homebrew/cask-verions
 
 echo "======================================================\n INSTALLING CASK APPS \n======================================================"
 
@@ -108,9 +110,8 @@ apps=(
     tor-browser
     rocket-chat
     tunnelblick
+    adoptopenjdk11
     mongodb-compass
-    java
-    java8
     teamviewer
     minikube
     alfred
