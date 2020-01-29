@@ -58,6 +58,7 @@ binaries=(
     jq
     kubectl
     kubernetes-helm
+    krew
     awscli
     terraform
     watch
@@ -151,6 +152,14 @@ fonts=(
 )
 
 brew cask install ${fonts[@]}
+
+echo "======================================================\n INSTALLING KREW BINS \n======================================================"
+
+krew_pkgs=(
+  kubectx
+)
+
+kubectl krew install  ${krew_pkgs[@]}
 
 
 pretty_print "We are done!...everthing looks good!"
