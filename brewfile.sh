@@ -122,6 +122,7 @@ apps=(
     fluor
     typora
     balenaetcher
+    boostnote
 )
 
 brew cask install --appdir="/Applications" ${apps[@]}
