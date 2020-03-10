@@ -162,6 +162,10 @@ krew_pkgs=(
 
 kubectl krew install  ${krew_pkgs[@]}
 
+#https://github.com/mstrzele/helm-edit in 03/2020 only for helm 2
+helm plugin install https://github.com/mstrzele/helm-edit
+
+
 
 pretty_print "We are done!...everthing looks good!"
 
