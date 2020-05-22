@@ -68,6 +68,8 @@ binaries=(
     pandoc
     dive
     minikube
+    kubectx
+    kubens
 )
 
 
@@ -156,11 +158,6 @@ brew cask install ${fonts[@]}
 
 echo "======================================================\n INSTALLING KREW BINS \n======================================================"
 
-krew_pkgs=(
-  kubectx
-)
-
-kubectl krew install  ${krew_pkgs[@]}
 
 #https://github.com/mstrzele/helm-edit in 03/2020 only for helm 2
 helm plugin install https://github.com/mstrzele/helm-edit
