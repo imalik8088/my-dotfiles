@@ -69,7 +69,6 @@ binaries=(
     dive
     minikube
     kubectx
-    kubens
 )
 
 
