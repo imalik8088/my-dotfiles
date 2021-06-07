@@ -124,6 +124,7 @@ apps=(
     typora
     balenaetcher
     boostnote
+    keystore-explorer
 )
 
 brew cask install --appdir="/Applications" ${apps[@]}
