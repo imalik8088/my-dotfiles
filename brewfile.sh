@@ -125,6 +125,7 @@ apps=(
     balenaetcher
     boostnote
     keystore-explorer
+    iina
 )
 
 brew cask install --appdir="/Applications" ${apps[@]}
