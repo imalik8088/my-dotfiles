@@ -232,6 +232,10 @@ ln -s /Applications/Xcode.app/Contents/Applications/iPhone\ Simulator.app /Appli
 # Add a spacer to the right side of the Dock (where the Trash is)
 #defaults write com.apple.dock persistent-others -array-add '{tile-data={}; tile-type="spacer-tile";}'
 
+# fast reapper of Dock
+defaults write com.apple.dock autohide-time-modifier -int 0;
+
+
 # Hot corners
 # Possible values:
 #  0: no-op
