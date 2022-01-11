@@ -268,6 +268,12 @@ defaults write com.apple.dock expose-animation-duration -float 0.1
 # Don’t automatically rearrange Spaces based on most recent use
 defaults write com.apple.dock mru-spaces -bool false
 
+
+# https://apple.stackexchange.com/a/70598
+defaults write com.apple.dock autohide-delay -int 0
+defaults write com.apple.dock autohide-time-modifier -float 0.4
+killall Dock
+
 ###############################################################################
 # Safari & WebKit                                                             #
 ###############################################################################

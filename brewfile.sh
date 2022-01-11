@@ -1,8 +1,6 @@
 # http://sourabhbajaj.com/mac-setup/index.html
 
-
-set -x
-set -e
+set -xe
 
 pretty_print() {
   printf "\n%b\n" "$1"
@@ -14,8 +12,9 @@ echo "======================================================\n CHECK BREW IF INS
 # Install if we don't have it
 if test ! $(which brew); then
   echo "================ INSTALLING HOMEBREW"
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-  echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.bash_profile
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/imalik/.zprofile
+  eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
 brew doctor
@@ -25,9 +24,6 @@ brew update
 
 # coreutils: GNU core utilities...
 # findutils: GNU find, locate, updatedb and xargs...
-
-brew tap adoptopenjdk/openjdk
-brew cask install adoptopenjdk/openjdk/adoptopenjdk8
 
 echo "======================================================\n INSTALLING BINARIES \n======================================================"
 
@@ -41,7 +37,8 @@ binaries=(
     tree
     vim
     nvm
-    typescript
+    openjdk
+    openjdk@11
     kotlin
     rust
     scala
@@ -58,7 +55,6 @@ binaries=(
     jq
     kubectl
     kubernetes-helm
-    krew
     awscli
     terraform
     watch
@@ -69,6 +65,11 @@ binaries=(
     dive
     minikube
     kubectx
+    kubens
+    k9s
+    php
+    pyenv
+    virtualenv
 )
 
 
@@ -79,12 +80,8 @@ pretty_print "installing binaries..."
 brew install ${binaries[@]}
 brew cleanup
 
-# https://github.com/robscott/kube-capacity?utm_sq=fzz4jx87q0
-brew tap robscott/tap
-brew install robscott/tap/kube-capacity
-
 # Homebrew Cask
-brew tap homebrew/cask-verions
+# brew tap homebrew/cask-verions
 
 echo "======================================================\n INSTALLING CASK APPS \n======================================================"
 
@@ -98,37 +95,33 @@ apps=(
     quicklook-csv
     dropbox
     google-chrome
-    google-backup-and-sync
     appcleaner
-    launchrocket
+    little-snitch
     firefox
-    virtualbox
-    vagrant
     vlc
     visual-studio-code
-    macdown
+    google-drive
     cakebrew
     insomnia
     iterm2
     tor-browser
-    rocket-chat
     tunnelblick
-    adoptopenjdk11
     mongodb-compass
-    teamviewer
-    alfred3
+    alfred
     whatsapp
     lunar
     dozer
     fluor
     typora
     balenaetcher
-    boostnote
     keystore-explorer
-    iina
+    1password
+    spotify
+    slack
+    microsoft-teams
 )
 
-brew cask install --appdir="/Applications" ${apps[@]}
+brew install --cask ${apps[@]}
 
 echo "======================================================\n INSTALLING FONTS \n======================================================"
 
