@@ -119,6 +119,7 @@ apps=(
     spotify
     slack
     microsoft-teams
+    notion
 )
 
 brew install --cask ${apps[@]}
