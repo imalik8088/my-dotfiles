@@ -120,6 +120,7 @@ apps=(
     slack
     microsoft-teams
     notion
+    portfolioperformance
 )
 
 brew install --cask ${apps[@]}
