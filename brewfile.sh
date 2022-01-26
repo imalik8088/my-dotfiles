@@ -70,6 +70,7 @@ binaries=(
     php
     pyenv
     virtualenv
+    hugo
 )
 
 
