@@ -71,6 +71,7 @@ binaries=(
     pyenv
     virtualenv
     hugo
+    git-delta
 )
 
 
