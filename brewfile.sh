@@ -123,6 +123,7 @@ apps=(
     microsoft-teams
     notion
     portfolioperformance
+    monitorcontrol
 )
 
 brew install --cask ${apps[@]}
