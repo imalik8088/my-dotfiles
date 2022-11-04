@@ -72,6 +72,7 @@ binaries=(
     virtualenv
     hugo
     git-delta
+    macos-trash
 )
 
 
