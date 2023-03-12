@@ -73,6 +73,7 @@ binaries=(
     hugo
     git-delta
     macos-trash
+    k3d
 )
 
 
