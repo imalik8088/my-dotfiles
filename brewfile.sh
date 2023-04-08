@@ -74,6 +74,7 @@ binaries=(
     git-delta
     macos-trash
     k3d
+    fx
 )
 
 
