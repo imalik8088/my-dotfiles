@@ -41,7 +41,6 @@ binaries=(
     openjdk@11
     kotlin
     rust
-    scala
     maven
     gradle
     sbt
@@ -86,7 +85,7 @@ brew install ${binaries[@]}
 brew cleanup
 
 # Homebrew Cask
-# brew tap homebrew/cask-verions
+brew tap homebrew/cask-verions
 
 echo "======================================================\n INSTALLING CASK APPS \n======================================================"
 
