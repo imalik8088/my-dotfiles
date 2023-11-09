@@ -37,8 +37,6 @@ binaries=(
     tree
     vim
     nvm
-    openjdk
-    openjdk@11
     kotlin
     rust
     maven
@@ -74,6 +72,7 @@ binaries=(
     macos-trash
     k3d
     fx
+    vcluster
 )
 
 
